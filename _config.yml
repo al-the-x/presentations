@@ -40,6 +40,27 @@ plugins:
 show_excerpts: true
 future: true
 
+collections:
+  presos:
+    output: true
+    permalink: /:name
+
+defaults:
+  - scope:
+      path: ""
+      type: presos
+    values:
+      layout: preso
+
+# Default `exclude` list:
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
 # Default `exclude` list:
 # exclude:
 #   - Gemfile
