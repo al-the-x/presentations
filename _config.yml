@@ -1,36 +1,46 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+url: "https://al-the-x.github.io"
+baseurl: "/presentations"
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Presentations
-email: hello@al-the-x.me
+title: Presentations by David Rogers aka "AL the X"
+license: Creative Commons BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>
 description: >- # this means to ignore newlines until "baseurl:"
-  Collected presentations by David Rogers AKA "AL the X"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+  All works created and owned by [David Rogers AKA "AL the X"](https://al-the-x.me)
+  and released under [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+
+email: hello@al-the-x.me
 twitter_username: al_the_x
 github_username:  al-the-x
 
 # Build settings
 markdown: kramdown
 theme: minima
+header_pages: [ 'none' ] # disable pages in `header.html`
 plugins:
-  - jekyll-feed
+# Enabled by default via GitHub Pages, duplicated here to make local preview
+#   work like deployment target
+  - jekyll-coffeescript ## process `*.coffee` files for hipsters
+  - jekyll-gist ## adds `{% gist [GIST_ID] %}`
+  - jekyll-github-metadata ## https://github.com/jekyll/github-metadata
+  - jekyll-paginate ## deprecated? https://github.com/jekyll/jekyll-paginate
+  - jekyll-relative-links ## convert [link](to/file.md) >> [link](to/file.html)
+  - jekyll-optional-front-matter ## https://github.com/benbalter/jekyll-optional-front-matter
+  - jekyll-readme-index ## https://github.com/benbalter/jekyll-readme-index
+  - jekyll-default-layout ## https://github.com/benbalter/jekyll-default-layout
+  - jekyll-titles-from-headings ## https://github.com/benbalter/jekyll-titles-from-headings
+# Optional from whitelist:
+# - jekyll-feed ## generate `feed.xml` from pages/posts but not collections :cry:
+# - jekyll-redirect-from ## add `redirect_from` and `redirect_to` front-matter
+  - jekyll-seo-tag ## adds `{% seo %}` for use in `<head>`
+# - jekyll-sitemap ## generates `sitemap.xml` for pages/posts/collections
+# - jekyll-avatar ## adds `{% avatar [USERNAME] %}`
+  - jemoji ## adds GitHub emoji shorthand, e.g. `:+1:`
+# - jekyll-mentions ## adds GitHub @-mentions, e.g. `@username`
+# - jekyll-include-cache ## cache `_includes` for speedier builds
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
+show_excerpts: true
+future: true
+
+# Default `exclude` list:
 # exclude:
 #   - Gemfile
 #   - Gemfile.lock
