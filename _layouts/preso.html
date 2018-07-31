@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
     {%- include head.html -%}
-    {%- include reveal.js.html -%}
+    {%- include reveal.head.html -%}
     <style>
       aside[class^="pull-"],
       aside[class^="pull-"] ~ * {
@@ -25,15 +25,7 @@
       </div>
       <nav class="progress"><span></span></nav>
     </main>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"
-        integrity="sha256-ixSKHrWAL2k0mqVSRju9+to2/uZSEK9+kJRfdNBolG8=" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js"
-        integrity="sha256-c6mIBJmjwIEMzRFz4hJTWcWDvcGnqJUicbkA6bsQoYE=" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js"
-        integrity="sha256-k07Q1HjAu3jUhg23V+WcK14cqHXbgRpIdYHjfLOkS+c=" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js"
-        integrity="sha256-Vn5yQ1qZyXA5iaNBIQOU3BCgEp1CU2CHUcPewUMn1tw=" crossorigin="anonymous" async
-        onload="javascript:hljs.initHighlightingOnLoad()"></script>
+    {%- include reveal.foot.html -%}
     <script>
       Reveal.initialize();
     </script>
