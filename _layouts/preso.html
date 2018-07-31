@@ -2,6 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
     {%- include head.html -%}
     {%- include reveal.head.html -%}
+    {%- include asciinema.head.html -%}
     <style>
       aside[class^="pull-"],
       aside[class^="pull-"] ~ * {
@@ -26,6 +27,7 @@
       <nav class="progress"><span></span></nav>
     </main>
     {%- include reveal.foot.html -%}
+    {%- include asciinema.foot.html -%}
     <script>
       Reveal.initialize();
     </script>

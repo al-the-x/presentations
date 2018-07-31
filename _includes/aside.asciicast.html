@@ -1,0 +1,11 @@
+<aside class="pull-{{include.pull | default: 'left'}}">
+  <asciinema-player
+    src="{{include.src}}"
+    speed="{{include.speed | default: 1}}"
+    font-size="{{include.font-size | default: 'big' }}"
+    {% unless include.defer %}preload{% endunless %}
+    {% if include.autoplay %}autoplay{% endif %}
+    {% if include.loop %}loop{% endif %}
+    {% if include.theme %}theme="{{include.theme}}"{% endif %}
+  ></asciinema-player>
+</aside>
