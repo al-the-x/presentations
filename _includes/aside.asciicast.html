@@ -1,6 +1,6 @@
 <aside class="pull-{{include.pull | default: 'left'}}">
   <asciinema-player
-    src="{{include.src}}"
+    src="{{include.src | relative_url }}"
     speed="{{include.speed | default: 1}}"
     font-size="{{include.font-size | default: 'big' }}"
     {% unless include.defer %}preload{% endunless %}
