@@ -5,7 +5,7 @@
     font-size="{{include.font-size | default: 'big' }}"
     {% unless include.defer %}preload{% endunless %}
     {% if include.autoplay %}autoplay{% endif %}
-    {% if include.loop %}loop{% endif %}
+    {% unless include.noloop %}loop{% endunless %}
     {% if include.theme %}theme="{{include.theme}}"{% endif %}
   ></asciinema-player>
 </aside>
