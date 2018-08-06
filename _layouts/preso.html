@@ -4,10 +4,16 @@
     {%- include reveal.head.html -%}
     {%- include asciinema.head.html -%}
     <style>
+      .reveal section > ol,
+      .reveal section > ul {
+        margin: 0; padding-left: 2em;
+      }
+
       aside[class^="pull-"],
       aside[class^="pull-"] ~ * {
         display: inline-block;
-        max-width: 50%;
+        box-sizing: border-box;
+        width: 50%;
       }
       aside.pull-left {
         float: left;
