@@ -7,8 +7,18 @@ excerpt: >-
   through a typical scenario as a team contributor, we learn some new tricks
   with `git log`, `git diff`, `git merge` and `git rebase`.
 reveal:
-  theme: "night"
+  theme: "beige"
   css: >-
+    /* CSS trick for semi-transparent background behind every slide */
+    body::before {
+      content: '';
+      background-image: url('./that-conference-2018-brand.png');
+      background-size: cover;
+      opacity: 0.4;
+
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+    }
 
     .reveal section li {
       line-height: 1.4;
@@ -24,6 +34,8 @@ reveal:
 # Advanced Git Fu
 ## The Learning Continues
 
+----
+<!-- .slide: data-background-image="./that-conference-2018-sponsors.png" data-transition="fade-in fade-out" -->
 ----
 
 {% include aside.img.html
@@ -484,6 +496,12 @@ Remember: `git reset --merge` or `git rebase --abort`
 - `vim` is not a trap
 
 ----
+<!-- .slide: style="height:100%" data-background-image="./that-conference-2018-next.png" data-transition="fade-in" -->
 
+<div style="position:absolute; top:50%; width:50%; right:0">
+  {% include aside.img.html pull="right"
+    src="https://gravatar.com/avatar/ece1d171f07e8c58d191a938e249d885?s=700"
+  %}
+</div>
 
 </script>
