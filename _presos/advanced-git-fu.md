@@ -6,7 +6,18 @@ excerpt: >-
   some hairy places as a senior dev working on a decent-sized team. Working
   through a typical scenario as a team contributor, we learn some new tricks
   with `git log`, `git diff`, `git merge` and `git rebase`.
-reveal: { theme: "night" }
+reveal:
+  theme: "night"
+  css: >-
+
+    .reveal section li {
+      line-height: 1.4;
+      padding-bottom: 1ex;
+    }
+    .reveal code {
+      color: purple;
+    }
+
 ---
 <script type="text/template">
 
