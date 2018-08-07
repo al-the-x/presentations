@@ -47,6 +47,17 @@
         maxScale: 1
       });
       Reveal.configure({{ page.reveal.config | jsonify }});
+
+      // start and pause `<asciinema-player>` on `slidechanged` event
+      Reveal.addEventListener('slidechanged', e => {
+        const prevPlayer = e.previousSlide.querySelector('asciinema-player');
+
+        const currPlayer = e.currentSlide.querySelector('asciinema-player');
+
+        prevPlayer && prevPlayer.pause();
+
+        currPlayer && currPlayer.play();
+      });
     </script>
   </body>
 </html>
