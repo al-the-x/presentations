@@ -28,6 +28,11 @@ reveal:
       color: purple;
     }
 
+    /* don't apply `margin` to `<asciinema-player>` */
+    .reveal asciinema-player .asciinema-terminal {
+      margin: 0;
+    }
+
 ---
 <script type="text/template">
 
