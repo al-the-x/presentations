@@ -39,6 +39,8 @@ reveal:
 # Advanced Git Fu
 ## The Learning Continues
 
+##### https://al-the-x.github.io/presentations/advanced-git-fu
+
 ----
 <!-- .slide: data-background-image="./that-conference-2018-sponsors.png" data-transition="fade-in fade-out" -->
 ----
@@ -153,7 +155,7 @@ reveal:
 ### Make your own `git` commands!
 
 ```sh
-git config --set alias.<alias-name> '<alias-value>'
+git config alias.<alias-name> '<alias-value>'
 ```
 
 ```sh
@@ -331,7 +333,7 @@ It can even compare files that aren't in source control.
 - `<commit>` can be described by its short or long hash
 - `<commit>^` describes the _parent_ of `<commit>`
 - `<commit>~<N>` describes `<N>` commits _prior to_ `<commit>`
-- `<commit>:<path>` describes the state of `<path>` _at_ `<commit>`
+- <u>`<commit>:<path>` describes the state of `<path>` _at_ `<commit>`</u>
 
 ----
 <!-- .slide: style="font-size: 90%" -->
@@ -384,7 +386,7 @@ Check the results, though... Let's try something different.
   src="git-rebase-interactive.cast"
 %}
 
-#### The case for `git rebase`...
+#### The Case for Rebase
 
 - `git rebase --interactive` edits a list of "todos" for each commit
 - rearrange the commits so the "rename only" commit is first (bottom)
@@ -441,11 +443,11 @@ Remember: `git reset --merge` or `git rebase --abort`
 
 ----
 
-### Yeah, but... Example?
-
 {% include aside.asciicast.html
   src="git-rebase-onto.cast"
 %}
+
+### Yeah, but... Example?
 
 - we want to apply our work `--onto origin/branch-A`
 - we can use `git log` to find the range of commits to include
